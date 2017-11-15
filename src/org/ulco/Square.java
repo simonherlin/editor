@@ -1,6 +1,9 @@
 package org.ulco;
 
 public class Square extends GraphicsObject {
+    private final Point m_origin;
+    private final double m_length;
+
     public Square(Point center, double length) {
         this.m_origin = center;
         this.m_length = length;
@@ -14,6 +17,10 @@ public class Square extends GraphicsObject {
 
         m_origin = new Point(str.substring(centerIndex + 7, lengthIndex - 1));
         m_length = Double.parseDouble(str.substring(lengthIndex + 7, endIndex));
+    }
+
+    protected boolean isObject(){
+        return true;
     }
 
     public GraphicsObject copy() {
@@ -38,7 +45,4 @@ public class Square extends GraphicsObject {
     public String toString() {
         return "square[" + m_origin.toString() + "," + m_length + "]";
     }
-
-    private final Point m_origin;
-    private final double m_length;
 }

@@ -1,6 +1,10 @@
 package org.ulco;
 
 public class Rectangle extends GraphicsObject {
+    private final Point m_origin;
+    private final double m_height;
+    private final double m_width;
+
     public Rectangle(Point center, double height, double width) {
         this.m_origin = center;
         this.m_height = height;
@@ -17,6 +21,10 @@ public class Rectangle extends GraphicsObject {
         m_origin = new Point(str.substring(centerIndex + 7, heightIndex - 1));
         m_height = Double.parseDouble(str.substring(heightIndex + 7, widthIndex - 1));
         m_width = Double.parseDouble(str.substring(widthIndex + 6, endIndex));
+    }
+
+    protected boolean isObject(){
+        return true;
     }
 
     public GraphicsObject copy() {
@@ -41,8 +49,4 @@ public class Rectangle extends GraphicsObject {
     public String toString() {
         return "rectangle[" + m_origin.toString() + "," + m_height + "," + m_width + "]";
     }
-
-    private final Point m_origin;
-    private final double m_height;
-    private final double m_width;
 }

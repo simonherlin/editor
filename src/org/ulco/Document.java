@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.Vector;
 
 public class Document {
+    private Vector<Layer> m_layers;
+
     public Document() {
         m_layers = new Vector<Layer>();
     }
@@ -126,5 +128,4 @@ public class Document {
         return str + " } }";
     }
 
-    private Vector<Layer> m_layers;
 }

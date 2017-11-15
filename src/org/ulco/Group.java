@@ -2,73 +2,60 @@ package org.ulco;
 
 import java.util.Vector;
 
-public class Group {
+public class Group extends GraphicsObject {
+    private Vector<GraphicsObject> m_objectList;
+    private int m_ID;
 
     public Group() {
-        m_groupList = new  Vector<Group>();
         m_objectList = new Vector<GraphicsObject>();
         m_ID = ++ID.ID;
     }
 
     public Group(String json) {
-        m_groupList = new  Vector<Group>();
         m_objectList = new Vector<GraphicsObject>();
-        String str = json.replaceAll("\\s+","");
+        String str = json.replaceAll("\\s+", "");
         int objectsIndex = str.indexOf("objects");
         int groupsIndex = str.indexOf("groups");
         int endIndex = str.lastIndexOf("}");
-
         parseObjects(str.substring(objectsIndex + 9, groupsIndex - 2));
         parseGroups(str.substring(groupsIndex + 8, endIndex - 1));
     }
 
-    public void add(Object object) {
-        if (object instanceof Group) {
-            addGroup((Group)object);
-        } else {
-            addObject((GraphicsObject)object);
-        }
+    protected boolean isObject() {
+        return false;
     }
 
-    private void addGroup(Group group) {
-        m_groupList.add(group);
+    public void add(Object object) {
+        addObject((GraphicsObject) object);
     }
 
     private void addObject(GraphicsObject object) {
         m_objectList.add(object);
     }
 
+    public boolean isClosed(Point pt, double distance) {
+        int i = 0;
+        boolean close;
+        do {
+            GraphicsObject element = m_objectList.elementAt(i);
+            close = element.isClosed(pt, distance);
+            i++;
+        } while (close != true && i != m_objectList.size());
+        return close;
+    }
+
     public Group copy() {
         Group g = new Group();
-
         for (Object o : m_objectList) {
             GraphicsObject element = (GraphicsObject) (o);
-
-            g.addObject(element.copy());
-        }
-        for (Object o : m_groupList) {
-            Group element = (Group) (o);
-
-            g.addGroup(element.copy());
+            g.add(element.copy());
         }
         return g;
     }
 
-    public int getID() {
-        return m_ID;
-    }
-
     public void move(Point delta) {
-        Group g = new Group();
-
         for (Object o : m_objectList) {
             GraphicsObject element = (GraphicsObject) (o);
-
-            element.move(delta);
-        }
-        for (Object o : m_groupList) {
-            Group element = (Group) (o);
-
             element.move(delta);
         }
     }
@@ -77,7 +64,6 @@ public class Group {
         int index = 0;
         int level = 0;
         boolean found = false;
-
         while (!found && index < str.length()) {
             if (str.charAt(index) == '{') {
                 ++level;
@@ -108,7 +94,7 @@ public class Group {
             } else {
                 groupStr = groupsStr.substring(0, separatorIndex);
             }
-            m_groupList.add(JSON.parseGroup(groupStr));
+            m_objectList.add(JSON.parseGroup(groupStr));
             if (separatorIndex == -1) {
                 groupsStr = "";
             } else {
@@ -121,7 +107,6 @@ public class Group {
         while (!objectsStr.isEmpty()) {
             int separatorIndex = searchSeparator(objectsStr);
             String objectStr;
-
             if (separatorIndex == -1) {
                 objectStr = objectsStr;
             } else {
@@ -137,11 +122,9 @@ public class Group {
     }
 
     public int size() {
-        int size = m_objectList.size();
-
-        for (int i = 0; i < m_groupList.size(); ++i) {
-            Group element = m_groupList.elementAt(i);
-
+        int size = 0;
+        for (int i = 0; i < m_objectList.size(); ++i) {
+            GraphicsObject element = m_objectList.elementAt(i);
             size += element.size();
         }
         return size;
@@ -149,47 +132,76 @@ public class Group {
 
     public String toJson() {
         String str = "{ type: group, objects : { ";
-
-        for (int i = 0; i < m_objectList.size(); ++i) {
-            GraphicsObject element = m_objectList.elementAt(i);
-
-            str += element.toJson();
-            if (i < m_objectList.size() - 1) {
-                str += ", ";
-            }
-        }
+        str += makeStringObjectJson();
         str += " }, groups : { ";
-
-        for (int i = 0; i < m_groupList.size(); ++i) {
-            Group element = m_groupList.elementAt(i);
-
-            str += element.toJson();
-        }
+        str += makeStringGroupJson();
         return str + " } }";
     }
 
     public String toString() {
         String str = "group[[";
-
-        for (int i = 0; i < m_objectList.size(); ++i) {
-            GraphicsObject element = m_objectList.elementAt(i);
-
-            str += element.toString();
-            if (i < m_objectList.size() - 1) {
-                str += ", ";
-            }
-        }
+        str += makeStringObjectToString();
         str += "],[";
-
-        for (int i = 0; i < m_groupList.size(); ++i) {
-            Group element = m_groupList.elementAt(i);
-
-            str += element.toString();
-        }
+        str += makeStringGroupToString();
         return str + "]]";
     }
 
-    private Vector<Group> m_groupList;
-    private Vector<GraphicsObject> m_objectList;
-    private int m_ID;
+    private String makeStringObjectToString() {
+        String str = "";
+        for (int i = 0; i < getObjects().size(); ++i) {
+            GraphicsObject element = getObjects().elementAt(i);
+            str += element.toString();
+            if (i < getObjects().size() - 1) {
+                str += ", ";
+            }
+        }
+        return str;
+    }
+
+    private String makeStringGroupToString() {
+        String str = "";
+        for (int i = 0; i < m_objectList.size(); ++i) {
+            if (!m_objectList.elementAt(i).isObject()) {
+                Group element = (Group) m_objectList.elementAt(i);
+                str += element.toString();
+            }
+        }
+        return str;
+    }
+
+    private String makeStringObjectJson (){
+        String str ="";
+        for (int i = 0; i < getObjects().size(); ++i) {
+            GraphicsObject element = getObjects().elementAt(i);
+            str += element.toJson();
+            if (i < getObjects().size() - 1) {
+                str += ", ";
+            }
+        }
+        return str;
+    }
+
+    private String makeStringGroupJson() {
+        String str ="";
+        for (int i = 0; i < m_objectList.size(); ++i) {
+            if(!m_objectList.elementAt(i).isObject()) {
+                Group element = (Group)m_objectList.elementAt(i);
+                str += element.toJson();
+            }
+        }
+        return str;
+    }
+
+    public int getID() {
+        return m_ID;
+    }
+
+    public Vector<GraphicsObject> getObjects(){
+        Vector<GraphicsObject> objects = new Vector<GraphicsObject>();
+        for(GraphicsObject obj : m_objectList){
+            if((obj.isObject()))
+                objects.add(obj);
+        }
+        return objects;
+    }
 }
