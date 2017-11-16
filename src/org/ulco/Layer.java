@@ -3,10 +3,14 @@ package org.ulco;
 import java.util.Vector;
 
 public class Layer {
+    private Vector<GraphicsObject> m_list;
+    private int m_ID;
+
     public Layer() {
         m_list = new Vector<GraphicsObject>();
         m_ID = ID.getInstance().getId();
     }
+
     public Layer(String json) {
         m_list= new Vector<GraphicsObject>();
         String str = json.replaceAll("\\s+","");
@@ -76,17 +80,6 @@ public class Layer {
         }
     }
 
-    public GraphicsObjects select(Point pt, double distance) {
-        GraphicsObjects list = new GraphicsObjects();
-
-        for (GraphicsObject object : m_list) {
-            if (object.isClosed(pt, distance)) {
-                list.add(object);
-            }
-        }
-        return list;
-    }
-
     public String toJson() {
         String str = "{ type: layer, objects : { ";
 
@@ -101,6 +94,7 @@ public class Layer {
         return str + " } }";
     }
 
-    private Vector<GraphicsObject> m_list;
-    private int m_ID;
+    public Vector<GraphicsObject> getLayer(){
+        return this.m_list;
+    }
 }

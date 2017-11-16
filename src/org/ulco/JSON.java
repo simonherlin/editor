@@ -1,5 +1,5 @@
 package org.ulco;
-import java.lang.reflect.*;import java.lang.reflect.*;
+import java.lang.reflect.*;
 public class JSON {
 
     static public GraphicsObject parse(String json) {
