@@ -8,7 +8,7 @@ public class Group extends GraphicsObject {
 
     public Group() {
         m_objectList = new Vector<GraphicsObject>();
-        m_ID = ++ID.ID;
+        m_ID = ID.getInstance().getId();
     }
 
     public Group(String json) {
