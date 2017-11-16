@@ -16,8 +16,9 @@ public class Layer {
         String str = json.replaceAll("\\s+","");
         int objectsIndex = str.indexOf("objects");
         int endIndex = str.lastIndexOf("}");
-
+        int groupsIndex = str.indexOf("groups");
         parseObjects(str.substring(objectsIndex + 9, endIndex - 1));
+        parseGroups(str.substring(groupsIndex + 8, endIndex - 1));
     }
 
     public void add(GraphicsObject o) {
@@ -34,6 +35,25 @@ public class Layer {
 
     public int getID() {
         return m_ID;
+    }
+
+    private void parseGroups(String groupsStr) {
+        while (!groupsStr.isEmpty()) {
+            int separatorIndex = searchSeparator(groupsStr);
+            String groupStr;
+
+            if (separatorIndex == -1) {
+                groupStr = groupsStr;
+            } else {
+                groupStr = groupsStr.substring(0, separatorIndex);
+            }
+            m_list.add(JSON.parseGroup(groupStr));
+            if (separatorIndex == -1) {
+                groupsStr = "";
+            } else {
+                groupsStr = groupsStr.substring(separatorIndex + 1);
+            }
+        }
     }
 
     private void parseObjects(String objectsStr) {
@@ -86,15 +106,37 @@ public class Layer {
         for (int i = 0; i < m_list.size(); ++i) {
             GraphicsObject element = m_list.elementAt(i);
 
-            str += element.toJson();
-            if (i < m_list.size() - 1) {
-                str += ", ";
+            if (element.isObject()) {
+                str += element.toJson();
+                if (i < m_list.size() - 1) {
+                    str += ", ";
+                }
             }
         }
+        str += " }, groups : { ";
+
+        for (int i = 0; i < m_list.size(); ++i) {
+
+
+            GraphicsObject element = m_list.elementAt(i);
+
+            if (!element.isObject())
+                str += element.toJson();
+        }
+
         return str + " } }";
     }
 
     public Vector<GraphicsObject> getLayer(){
         return this.m_list;
+    }
+
+    public int size() {
+        int size = 0;
+        for (int i = 0; i < this.m_list.size(); ++i) {
+            GraphicsObject element = this.m_list.elementAt(i);
+            size += element.size();
+        }
+        return size;
     }
 }
