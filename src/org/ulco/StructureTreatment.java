@@ -25,5 +25,4 @@ public class StructureTreatment {
         }
         return list;
     }
-
 }

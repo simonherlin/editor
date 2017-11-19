@@ -1,6 +1,6 @@
 package org.ulco;
 
-public class Point {
+public class Point implements Interface {
     private double m_x;
     private double m_y;
 
@@ -15,7 +15,6 @@ public class Point {
         int separatorIndex = str.indexOf(",", xIndex + 2);
         int yIndex = str.lastIndexOf("y");
         int endIndex = str.lastIndexOf("}");
-
         m_x = Double.parseDouble(str.substring(xIndex + 2, separatorIndex));
         m_y = Double.parseDouble(str.substring(yIndex + 2, endIndex));
     }
@@ -43,5 +42,9 @@ public class Point {
 
     public String toString() {
         return "point[" + m_x + "," + m_y + "]";
+    }
+
+    public double distance(Point p){
+        return Math.sqrt(Math.pow(getX() - p.getX(),2) + Math.pow(getY() - p.getY(), 2));
     }
 }

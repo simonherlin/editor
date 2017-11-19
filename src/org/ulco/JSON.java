@@ -2,15 +2,15 @@ package org.ulco;
 import java.lang.reflect.*;
 public class JSON {
 
-    static public GraphicsObject parse(String json) {
-        GraphicsObject o = null;
+    static public Interface parse(String json) {
+        Object o = null;
         String str = json.replaceAll("\\s+", "");
         String type = str.substring(str.indexOf("type") + 5, str.indexOf(","));
         type = type.substring(0, 1).toUpperCase() + type.substring(1);
         try {
             Class classe = Class.forName("org.ulco." + type);
             Constructor constructeur = classe.getConstructor(String.class);
-            o = (GraphicsObject) constructeur.newInstance(str);
+            o = constructeur.newInstance(str);
         } catch (ClassNotFoundException e) {
         } catch (NoSuchMethodException e) {
         } catch (InstantiationException e) {
@@ -18,7 +18,7 @@ public class JSON {
         } catch (InvocationTargetException e) {
         } catch (IllegalArgumentException e) {
         }
-        return o;
+        return (Interface)o;
     }
 
     static public Group parseGroup(String json) {
