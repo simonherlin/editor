@@ -4,7 +4,7 @@ public class Rectangle extends GraphicsObject {
     protected Point m_origin;
     protected double m_height;
     protected double m_width;
-    protected Parse myParse;
+    protected JSON myParse;
 
     public Rectangle(){}
 
@@ -15,7 +15,7 @@ public class Rectangle extends GraphicsObject {
     }
 
     public Rectangle(String json) {
-        this.myParse = new Parse();
+        this.myParse = new JSON();
         m_origin = this.myParse.parsePoint(json, "height");
         m_height = this.myParse.parseDouble(json, "height", "width");
         m_width = this.myParse.parseDouble(json, "width", "}");
@@ -28,16 +28,24 @@ public class Rectangle extends GraphicsObject {
     public Point getOrigin() { return m_origin; }
 
     Point center() {
-        return new Point(m_origin.getX() + m_width / 2, m_origin.getY() + m_height / 2);
+        return this.m_origin;
     }
 
     void move(Point delta) { m_origin.move(delta); }
 
-    public String toJson() {
-        return "{ type: rectangle, center: " + m_origin.toJson() + ", height: " + this.m_height + ", width: " + this.m_width + " }";
-    }
-
     public String toString() {
         return "rectangle[" + m_origin.toString() + "," + m_height + "," + m_width + "]";
+    }
+
+    public double getHeight () {
+        return this.m_height;
+    }
+
+    public double getWidth () {
+        return this.m_width;
+    }
+
+    public String getType () {
+        return "rectangle";
     }
 }

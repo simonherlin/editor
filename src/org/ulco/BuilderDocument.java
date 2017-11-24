@@ -9,7 +9,6 @@ public class BuilderDocument {
 
     public BuilderDocument(Document doc){
         this.document = doc;
-        m_layers = this.document.getLayer();
         m_layers = new Vector<Layer>();
         layer = this.document.createLayer();
     }

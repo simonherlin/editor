@@ -7,6 +7,10 @@ abstract public class GraphicsObject implements Interface {
         m_ID  = ID.getInstance().getId();
     }
 
+    public String getTypeOFContainer() {
+        return "objects";
+    }
+
     public boolean isClosed(Point pt, double distance){
         return center().distance(pt) <= distance;
     }
@@ -24,8 +28,6 @@ abstract public class GraphicsObject implements Interface {
     abstract Point center();
 
     abstract void move(Point delta);
-
-    abstract public String toJson();
 
     abstract public String toString();
 }

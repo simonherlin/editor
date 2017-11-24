@@ -42,12 +42,13 @@ public class DocumentTest extends TestCase {
         Layer l2 = document.createLayer();
         Rectangle r = new Rectangle(new Point(-5, 1), 4, 2);
         Circle c2 = new Circle(new Point(-4, 8), 1);
+        JSON myJson = new JSON();
 
         l1.add(s);
         l1.add(c1);
         l2.add(r);
         l2.add(c2);
-        assertEquals(document.toJson(), "{ type: document, layers: { { type: layer, objects : { { type: square, center: { type: point, x: 0.0, y: 0.0 }, length: 5.0 }, { type: circle, center: { type: point, x: 5.0, y: 5.0 }, radius: 4.0 } }, groups : {  } }, { type: layer, objects : { { type: rectangle, center: { type: point, x: -5.0, y: 1.0 }, height: 4.0, width: 2.0 }, { type: circle, center: { type: point, x: -4.0, y: 8.0 }, radius: 1.0 } }, groups : {  } } } }");
+        assertEquals(myJson.parseToJSON(document), "{ type: document, layers : { { type: layer, objects : { { type: square, center: { type: point, x: 0.0, y: 0.0 }, length: 5.0 }, { type: circle, center: { type: point, x: 5.0, y: 5.0 }, radius: 4.0 } }, groups : {  } }, { type: layer, objects : { { type: rectangle, center: { type: point, x: -5.0, y: 1.0 }, height: 4.0, width: 2.0 }, { type: circle, center: { type: point, x: -4.0, y: 8.0 }, radius: 1.0 } }, groups : {  } } } }");
     }
 
     @Test
@@ -59,12 +60,13 @@ public class DocumentTest extends TestCase {
         Layer l2 = document.createLayer();
         Rectangle r = new Rectangle(new Point(-5, 1), 4, 2);
         Circle c2 = new Circle(new Point(-4, 8), 1);
+        JSON myJson = new JSON();
 
         l1.add(s);
         l1.add(c1);
         l2.add(r);
         l2.add(c2);
-        assertEquals(document.toJson(), "{ type: document, layers: { { type: layer, objects : { { type: square, center: { type: point, x: 0.0, y: 0.0 }, length: 5.0 }, { type: circle, center: { type: point, x: 5.0, y: 5.0 }, radius: 4.0 } }, groups : {  } }, { type: layer, objects : { { type: rectangle, center: { type: point, x: -5.0, y: 1.0 }, height: 4.0, width: 2.0 }, { type: circle, center: { type: point, x: -4.0, y: 8.0 }, radius: 1.0 } }, groups : {  } } } }");
+        assertEquals(myJson.parseToJSON(document), "{ type: document, layers : { { type: layer, objects : { { type: square, center: { type: point, x: 0.0, y: 0.0 }, length: 5.0 }, { type: circle, center: { type: point, x: 5.0, y: 5.0 }, radius: 4.0 } }, groups : {  } }, { type: layer, objects : { { type: rectangle, center: { type: point, x: -5.0, y: 1.0 }, height: 4.0, width: 2.0 }, { type: circle, center: { type: point, x: -4.0, y: 8.0 }, radius: 1.0 } }, groups : {  } } } }");
     }
 
     public void testSize() throws Exception {

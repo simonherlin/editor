@@ -2,54 +2,52 @@ package org.ulco;
 
 import java.util.Vector;
 
-public class Document implements Interface {
-    private Vector<Layer> m_layers;
-    private Parse parse;
+public class Document implements Child {
+    private Vector<Layer> child;
+    private JSON parse;
 
     public Document() {
-        m_layers = new Vector<Layer>();
+        child = new Vector<Layer>();
     }
 
     public Document(String json) {
-        parse = new Parse();
-        Vector<String> separators = new Vector<String>();
-        separators.add("layers");
-        separators.add("}");
-        m_layers = parse.parseItems(json, separators);
+        parse = new JSON();
+        String[] separators = new String[] {"layers", "}"};
+        child = parse.parseItems(json, separators);
+    }
+
+    public String[] getTypes(){
+        return new String[]{"layers"};
+    }
+
+    public String getType () {
+        return "document";
+    }
+
+    public Vector<Layer> getChildren(){
+        return child;
+    }
+
+    public String getTypeOFContainer() {
+        return "documents";
     }
 
     public Layer createLayer() {
         Layer layer = new Layer();
-        m_layers.add(layer);
+        child.add(layer);
         return layer;
     }
 
     public int getLayerNumber() {
-        return m_layers.size();
+        return child.size();
     }
 
     public int getObjectNumber() {
         int size = 0;
 
-        for (int i = 0; i < m_layers.size(); ++i) {
-            size += m_layers.elementAt(i).getObjectNumber();
+        for (int i = 0; i < child.size(); ++i) {
+            size += child.elementAt(i).getObjectNumber();
         }
         return size;
-    }
-
-    public Vector<Layer> getLayer(){
-        return this.m_layers;
-    }
-
-    public String toJson() {
-        String str = "{ type: document, layers: { ";
-        for (int i = 0; i < m_layers.size(); ++i) {
-            Layer element = m_layers.elementAt(i);
-            str += element.toJson();
-            if (i < m_layers.size() - 1) {
-                str += ", ";
-            }
-        }
-        return str + " } }";
     }
 }

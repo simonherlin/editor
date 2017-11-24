@@ -6,7 +6,7 @@ public class StructureTreatment {
 
     public GraphicsObjects select(Point pt, double distance, Document document) {
         GraphicsObjects list = new GraphicsObjects();
-        Vector<Layer> LayerList = document.getLayer();
+        Vector<Layer> LayerList = document.getChildren();
 
         for (Layer layer : LayerList) {
             list.addAll(select(pt, distance, layer));
@@ -16,7 +16,7 @@ public class StructureTreatment {
 
     public GraphicsObjects select(Point pt, double distance, Layer layer) {
         GraphicsObjects list = new GraphicsObjects();
-        Vector<GraphicsObject> ListObject = layer.getLayer();
+        Vector<GraphicsObject> ListObject = layer.getChildren();
 
         for (GraphicsObject object : ListObject) {
             if (object.isClosed(pt, distance)) {

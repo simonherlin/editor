@@ -19,6 +19,14 @@ public class Point implements Interface {
         m_y = Double.parseDouble(str.substring(yIndex + 2, endIndex));
     }
 
+    public String getType() {
+        return "point";
+    }
+
+    public String getTypeOFContainer() {
+        return "point";
+    }
+
     public Point copy() {
         return new Point(m_x, m_y);
     }
@@ -34,10 +42,6 @@ public class Point implements Interface {
     void move(Point delta){
         m_x += delta.getX();
         m_y += delta.getY();
-    }
-
-    public String toJson() {
-        return "{ type: point, x: " + m_x + ", y: " + this.m_y + " }";
     }
 
     public String toString() {

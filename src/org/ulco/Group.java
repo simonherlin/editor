@@ -2,22 +2,24 @@ package org.ulco;
 
 import java.util.Vector;
 
-public class Group extends GraphicsObject {
-    private Vector<GraphicsObject> m_objectList;
-    private Parse myParse;
+public class Group extends GraphicsObject implements Child{
+    private Vector<GraphicsObject> child;
+    private JSON myParse;
 
     public Group() {
         super();
-        m_objectList = new Vector<GraphicsObject>();
+        child = new Vector<GraphicsObject>();
     }
 
     public Group(String json) {
-        this.myParse = new Parse();
-        Vector<String> separators = new Vector<String>();
-        separators.add("objects");
-        separators.add("groups");
-        separators.add("}");
-        m_objectList = this.myParse.parseItems(json, separators);
+        super();
+        this.myParse = new JSON();
+        String[] separators = new String[] {"objects", "groups", "}"};
+        child = this.myParse.parseItems(json, separators);
+    }
+
+    public String getTypeOFContainer(){
+        return "groups";
     }
 
     protected boolean isObject() {
@@ -28,28 +30,40 @@ public class Group extends GraphicsObject {
         return null;
     }
 
+    public String getType() {
+        return "group";
+    }
+
+    public Vector<GraphicsObject> getChildren() {
+        return child;
+    }
+
+    public String[] getTypes() {
+        return new String[] {"objects", "groups"};
+    }
+
     public void add(Object object) {
         addObject((GraphicsObject) object);
     }
 
     private void addObject(GraphicsObject object) {
-        m_objectList.add(object);
+        child.add(object);
     }
 
     public boolean isClosed(Point pt, double distance) {
         int i = 0;
         boolean close;
         do {
-            GraphicsObject element = m_objectList.elementAt(i);
+            GraphicsObject element = child.elementAt(i);
             close = element.isClosed(pt, distance);
             i++;
-        } while (close != true && i != m_objectList.size());
+        } while (close != true && i != child.size());
         return close;
     }
 
     public Group copy() {
         Group g = new Group();
-        for (Object o : m_objectList) {
+        for (Object o : child) {
             GraphicsObject element = (GraphicsObject) (o);
             g.add(element.copy());
         }
@@ -57,42 +71,30 @@ public class Group extends GraphicsObject {
     }
 
     public void move(Point delta) {
-        for (Object o : m_objectList) {
+        for (Object o : child) {
             GraphicsObject element = (GraphicsObject) (o);
             element.move(delta);
         }
     }
 
-    public String toJson() {
-        return this.makeDataToExport(false);
-    }
-
     public String toString() {
-        return this.makeDataToExport(true);
+        return this.makeDataToExport();
     }
 
-    private String makeDataToExport (boolean toString){
+    private String makeDataToExport (){
         String begin, middle, end;
-        if (toString){
             begin = "group[[";
             middle = "],[";
             end = "]]";
-        }
-        else{
-            begin = "{ type: group, objects : { ";
-            middle = " }, groups : { ";
-            end = " } }";
-        }
-        return makeStringToExport(begin, middle, end, toString);
+        return makeStringToExport(begin, middle, end);
     }
 
-    private String makeStringToExport(String begin, String middle, String end, boolean toString){
-        for (GraphicsObject element : m_objectList) {
+    private String makeStringToExport(String begin, String middle, String end){
+        for (GraphicsObject element : child) {
             if (element.isObject()) {
-                begin += ((toString) ? element.toString() : element.toJson()) + ", ";
-            }
-            else {
-                middle += toString ? element.toString() : element.toJson();
+                begin += element.toString()+", ";
+            } else {
+                middle +=  element.toString();
             }
         }
         return begin.substring(0, begin.length() -2) + middle + end;
@@ -102,23 +104,10 @@ public class Group extends GraphicsObject {
         return super.getID();
     }
 
-    public Vector<GraphicsObject> getObjects(){
-        Vector<GraphicsObject> objects = new Vector<GraphicsObject>();
-        for(GraphicsObject obj : m_objectList){
-            if((obj.isObject()))
-                objects.add(obj);
-        }
-        return objects;
-    }
-
-    public Vector<GraphicsObject> getList(){
-        return this.m_objectList;
-    }
-
     public int size() {
         int size = 0;
-        for (int i = 0; i < m_objectList.size(); ++i) {
-            GraphicsObject element = m_objectList.elementAt(i);
+        for (int i = 0; i < child.size(); ++i) {
+            GraphicsObject element = child.elementAt(i);
             size += element.size();
         }
         return size;

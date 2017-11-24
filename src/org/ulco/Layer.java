@@ -2,69 +2,58 @@ package org.ulco;
 
 import java.util.Vector;
 
-public class Layer implements Interface {
-    private Vector<GraphicsObject> m_list;
+public class Layer implements Child {
+    private Vector<GraphicsObject> child;
     private int m_ID;
-    private Parse myParse;
+    private JSON myParse;
 
     public Layer() {
-        m_list = new Vector<GraphicsObject>();
+        child = new Vector<GraphicsObject>();
         m_ID = ID.getInstance().getId();
     }
 
     public Layer(String json) {
-        this.myParse = new Parse();
-        Vector<String> separators = new Vector<String>();
-        separators.add("objects");
-        separators.add("groups");
-        separators.add("}");
-        m_list = this.myParse.parseItems(json, separators);
+        this.myParse = new JSON();
+        String[] separators = new String[] {"objects", "groups", "}"};
+        child = this.myParse.parseItems(json, separators);
+    }
+
+    public Vector<GraphicsObject> getChildren(){
+        return this.child;
+    }
+
+    public String getType(){
+        return "layer";
+    }
+
+    public String[] getTypes () {
+        return new String[]{"objects", "groups"};
+    }
+
+    public String getTypeOFContainer(){
+        return "layers";
     }
 
     public void add(GraphicsObject o) {
-        m_list.add(o);
+        child.add(o);
     }
 
     public GraphicsObject get(int index) {
-        return m_list.elementAt(index);
+        return child.elementAt(index);
     }
 
     public int getObjectNumber() {
-        return m_list.size();
+        return child.size();
     }
 
     public int getID() {
         return m_ID;
     }
 
-    public String toJson() {
-        String str = "{ type: layer, objects : { ";
-        for (int i = 0; i < m_list.size(); ++i) {
-            GraphicsObject element = m_list.elementAt(i);
-            if (element.isObject()) {
-                str += element.toJson();
-                if (i < m_list.size() - 1) {
-                    str += ", ";
-                }
-            }
-        }
-        str += " }, groups : { ";
-        for (int i = 0; i < m_list.size(); ++i) {
-            GraphicsObject element = m_list.elementAt(i);
-            if (!element.isObject())
-                str += element.toJson();
-        }
-        return str + " } }";
-    }
-
-    public Vector<GraphicsObject> getLayer(){
-        return this.m_list;
-    }
-
     public int size() {
         int size = 0;
-        for (int i = 0; i < m_list.size(); ++i) {
-            GraphicsObject element = m_list.elementAt(i);
+        for (int i = 0; i < child.size(); ++i) {
+            GraphicsObject element = child.elementAt(i);
             size += element.size();
         }
         return size;

@@ -3,7 +3,7 @@ package org.ulco;
 public class Circle extends GraphicsObject {
     private final Point m_center;
     private final double m_radius;
-    Parse myparse;
+    JSON myparse;
 
     public Circle(Point center, double radius) {
         this.m_center = center;
@@ -11,7 +11,7 @@ public class Circle extends GraphicsObject {
     }
 
     public Circle(String json) {
-        this.myparse = new Parse();
+        this.myparse = new JSON();
         m_center = this.myparse.parsePoint(json, "radius");
         m_radius = this.myparse.parseDouble(json, "radius", "}");
     }
@@ -28,11 +28,15 @@ public class Circle extends GraphicsObject {
 
     void move(Point delta) { m_center.move(delta); }
 
-    public String toJson() {
-        return "{ type: circle, center: " + m_center.toJson() + ", radius: " + this.m_radius + " }";
-    }
-
     public String toString() {
         return "circle[" + m_center.toString() + "," + m_radius + "]";
+    }
+
+    public double getRadius(){
+        return this.m_radius;
+    }
+
+    public String getType () {
+        return "circle";
     }
 }
