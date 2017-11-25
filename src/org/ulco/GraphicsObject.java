@@ -2,9 +2,13 @@ package org.ulco;
 
 abstract public class GraphicsObject implements Interface {
     private int m_ID;
+    private String borderColor;
+    private String insideColor;
 
     public GraphicsObject() {
-        m_ID  = ID.getInstance().getId();
+        this.m_ID  = ID.getInstance().getId();
+        this.borderColor = "aucune";
+        this.insideColor = "aucune";
     }
 
     public String getTypeOFContainer() {
@@ -19,6 +23,22 @@ abstract public class GraphicsObject implements Interface {
 
     public int getID() {
         return m_ID;
+    }
+
+    public String getBorderColor() {
+        return borderColor;
+    }
+
+    public String getInsideColor() {
+        return insideColor;
+    }
+
+    public void setBorderColor(String borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public void setInsideColor(String insideColor){
+        this.insideColor = insideColor;
     }
 
     abstract public GraphicsObject copy();

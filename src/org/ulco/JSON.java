@@ -35,6 +35,24 @@ public class JSON {
         return new Document(json);
     }
 
+    private <T> Vector<T> parseOne(String str) {
+        Vector<T> items = new Vector<>();
+        while (!str.isEmpty()) {
+            String itemStr;
+            int separatorIndex = this.searchSeparator(str);
+            if (separatorIndex == -1){
+                itemStr = str;
+                str = "";
+            }
+            else {
+                itemStr = str.substring(0, separatorIndex);
+                str = str.substring(separatorIndex + 1);
+            }
+            items.add((T) JSON.parse(itemStr));
+        }
+        return items;
+    }
+
     private int searchSeparator(String str) {
         int index = 0;
         int level = 0;
@@ -64,7 +82,26 @@ public class JSON {
         String begin = "center: ";
         begin += this.centerToJSON(graphicsObject.center()) + ", ";
         begin += this.attributToJSON(graphicsObject);
+        if (graphicsObject.getBorderColor() != "aucune" || graphicsObject.getInsideColor() != "aucune"){
+            begin += colorToJSON(graphicsObject);
+        }
         return begin;
+    }
+
+    private String colorToJSON(GraphicsObject graphicsObject){
+        String color = ", ";
+        if (graphicsObject.getInsideColor() != "aucune"){
+            color += "color inside: ";
+            color += graphicsObject.getInsideColor();
+            if (graphicsObject.getBorderColor() != "aucune"){
+                color += ", color border: ";
+                color += graphicsObject.getBorderColor();
+            }
+        }
+        else{
+            color += "color border: " +graphicsObject.getBorderColor();
+        }
+        return color;
     }
 
     private String centerToJSON(Point center){
@@ -153,24 +190,6 @@ public class JSON {
             content = this.childrenToJSON((Child) i);
         }
         return begin + content + end;
-    }
-
-    public <T> Vector<T> parseOne(String str) {
-        Vector<T> items = new Vector<>();
-        while (!str.isEmpty()) {
-            String itemStr;
-            int separatorIndex = this.searchSeparator(str);
-            if (separatorIndex == -1){
-                itemStr = str;
-                str = "";
-            }
-            else {
-                itemStr = str.substring(0, separatorIndex);
-                str = str.substring(separatorIndex + 1);
-            }
-            items.add((T) JSON.parse(itemStr));
-        }
-        return items;
     }
 
     public String replace(String str){
