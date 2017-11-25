@@ -4,12 +4,12 @@ import java.util.Vector;
 
 public class Layer implements Child {
     private Vector<GraphicsObject> child;
-    private int m_ID;
+    private int id;
     private JSON myParse;
 
     public Layer() {
         child = new Vector<GraphicsObject>();
-        m_ID = ID.getInstance().getId();
+        id = ID.getInstance().getId();
     }
 
     public Layer(String json) {
@@ -47,7 +47,7 @@ public class Layer implements Child {
     }
 
     public int getID() {
-        return m_ID;
+        return id;
     }
 
     public int size() {

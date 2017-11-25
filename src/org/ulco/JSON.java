@@ -123,6 +123,10 @@ public class JSON {
                 Rectangle rectangle = (Rectangle) graphicsObject;
                 output = "height: " + rectangle.getHeight() + ", width: " + rectangle.getWidth();
                 break;
+            case "triangle" :
+                Triangle triangle = (Triangle) graphicsObject;
+                output = "height: "+ triangle.getHeight() + ", base: " + triangle.getBase();
+                break;
         }
         return output;
     }

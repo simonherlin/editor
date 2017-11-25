@@ -1,12 +1,12 @@
 package org.ulco;
 
 abstract public class GraphicsObject implements Interface {
-    private int m_ID;
+    private int id;
     private String borderColor;
     private String insideColor;
 
     public GraphicsObject() {
-        this.m_ID  = ID.getInstance().getId();
+        this.id = ID.getInstance().getId();
         this.borderColor = "aucune";
         this.insideColor = "aucune";
     }
@@ -22,7 +22,7 @@ abstract public class GraphicsObject implements Interface {
     public int size(){return 1; }
 
     public int getID() {
-        return m_ID;
+        return id;
     }
 
     public String getBorderColor() {

@@ -3,25 +3,25 @@ package org.ulco;
 public class Square extends Rectangle {
 
     public Square(Point center, double length) {
-        this.m_origin = center;
-        this.m_width = length;
+        this.origin = center;
+        this.width = length;
     }
 
     public Square(String json) {
         this.myParse = new JSON();
-        m_origin = this.myParse.parsePoint(json, "length");
-        m_width = this.myParse.parseDouble(json, "length", "}");
-        m_height = this.myParse.parseDouble(json, "length", "}");
+        origin = this.myParse.parsePoint(json, "length");
+        width = this.myParse.parseDouble(json, "length", "}");
+        height = this.myParse.parseDouble(json, "length", "}");
     }
 
     public GraphicsObject copy() {
-        return new Square(this.m_origin.copy(), this.m_width);
+        return new Square(this.origin.copy(), this.width);
     }
 
-    /*public Point getOrigin() { return this.m_origin; }*/
+    /*public Point getOrigin() { return this.origin; }*/
 
     public String toString() {
-        return "square[" + this.m_origin.toString() + "," + this.m_width + "]";
+        return "square[" + this.origin.toString() + "," + this.width + "]";
     }
 
     @Override

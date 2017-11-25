@@ -1,39 +1,39 @@
 package org.ulco;
 
 public class Circle extends GraphicsObject {
-    private final Point m_center;
-    private final double m_radius;
+    private final Point center;
+    private final double radius;
     JSON myparse;
 
     public Circle(Point center, double radius) {
-        this.m_center = center;
-        this.m_radius = radius;
+        this.center = center;
+        this.radius = radius;
     }
 
     public Circle(String json) {
         this.myparse = new JSON();
-        m_center = this.myparse.parsePoint(json, "radius");
-        m_radius = this.myparse.parseDouble(json, "radius", "}");
+        center = this.myparse.parsePoint(json, "radius");
+        radius = this.myparse.parseDouble(json, "radius", "}");
     }
 
     public Point center() {
-        return m_center;
+        return center;
     }
 
     public GraphicsObject copy() {
-        return new Circle(m_center.copy(), m_radius);
+        return new Circle(center.copy(), radius);
     }
 
-    public Point getCenter() { return m_center; }
+    public Point getCenter() { return center; }
 
-    void move(Point delta) { m_center.move(delta); }
+    void move(Point delta) { center.move(delta); }
 
     public String toString() {
-        return "circle[" + m_center.toString() + "," + m_radius + "]";
+        return "circle[" + center.toString() + "," + radius + "]";
     }
 
     public double getRadius(){
-        return this.m_radius;
+        return this.radius;
     }
 
     public String getType () {

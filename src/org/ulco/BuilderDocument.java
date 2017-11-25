@@ -4,12 +4,12 @@ import java.util.Vector;
 
 public class BuilderDocument {
     private Document document;
-    private  Vector<Layer> m_layers;
+    private  Vector<Layer> layers;
     private Layer layer;
 
     public BuilderDocument(Document doc){
         this.document = doc;
-        m_layers = new Vector<Layer>();
+        layers = new Vector<Layer>();
         layer = this.document.createLayer();
     }
 

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ee73518-0376-4a38-83e7-9b8b15cad9f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/ulco/Color.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/ColorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/ulco/Triangle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/TriangleTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/ulco/Color.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/BuilderDocument.java" afterPath="$PROJECT_DIR$/src/org/ulco/BuilderDocument.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/Circle.java" afterPath="$PROJECT_DIR$/src/org/ulco/Circle.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/GraphicsObject.java" afterPath="$PROJECT_DIR$/src/org/ulco/GraphicsObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/JSON.java" afterPath="$PROJECT_DIR$/src/org/ulco/JSON.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/Layer.java" afterPath="$PROJECT_DIR$/src/org/ulco/Layer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/Point.java" afterPath="$PROJECT_DIR$/src/org/ulco/Point.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/Rectangle.java" afterPath="$PROJECT_DIR$/src/org/ulco/Rectangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/ulco/Square.java" afterPath="$PROJECT_DIR$/src/org/ulco/Square.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,32 +34,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GroupTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/GroupTest.java">
+      <file leaf-file-name="Group.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Group.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="442">
+              <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Group#0;class#Group#0" expanded="false" />
+                <element signature="method#Group#1;class#Group#0" expanded="false" />
+                <element signature="e#1040#1041#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="method#isClosed#0;class#Group#0" expanded="false" />
+                <element signature="method#copy#0;class#Group#0" expanded="false" />
+                <element signature="method#move#0;class#Group#0" expanded="false" />
+                <element signature="method#makeDataToExport#0;class#Group#0" expanded="false" />
+                <element signature="method#makeStringToExport#0;class#Group#0" expanded="false" />
+                <element signature="method#size#0;class#Group#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Document.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ulco/Document.java">
+      <file leaf-file-name="ID.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/ID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="36" />
-              <folding>
-                <element signature="method#Document#1;class#Document#0" expanded="false" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="method#createLayer#0;class#Document#0" expanded="false" />
-                <element signature="method#getObjectNumber#0;class#Document#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Interface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,18 +78,21 @@
       <file leaf-file-name="JSON.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/ulco/JSON.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="95" column="58" lean-forward="false" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
+            <state relative-caret-position="408">
+              <caret line="110" column="64" lean-forward="false" selection-start-line="110" selection-start-column="64" selection-end-line="110" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parse#0;class#JSON#0" expanded="false" />
                 <element signature="method#parseOne#0;class#JSON#0" expanded="false" />
                 <element signature="method#searchSeparator#0;class#JSON#0" expanded="false" />
+                <element signature="method#objectToJSON#0;class#JSON#0" expanded="false" />
+                <element signature="method#colorToJSON#0;class#JSON#0" expanded="false" />
                 <element signature="method#centerToJSON#0;class#JSON#0" expanded="false" />
                 <element signature="method#attributToJSON#0;class#JSON#0" expanded="false" />
                 <element signature="method#childrenToJSON#0;class#JSON#0" expanded="false" />
                 <element signature="method#specifyChild#0;class#JSON#0" expanded="false" />
                 <element signature="method#parseItems#0;class#JSON#0" expanded="false" />
+                <element signature="method#parseToJSON#0;class#JSON#0" expanded="false" />
                 <element signature="method#parsePoint#0;class#JSON#0" expanded="false" />
                 <element signature="method#parseDouble#0;class#JSON#0" expanded="false" />
               </folding>
@@ -79,36 +100,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColorTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/ColorTest.java">
+      <file leaf-file-name="Layer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Layer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="35" column="136" lean-forward="false" selection-start-line="35" selection-start-column="136" selection-end-line="35" selection-end-column="136" />
+            <state relative-caret-position="65">
+              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Layer#0;class#Layer#0" expanded="false" />
+                <element signature="method#Layer#1;class#Layer#0" expanded="false" />
+                <element signature="method#size#0;class#Layer#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CircleTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/CircleTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSONTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/JSONTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="46" selection-end-column="36" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +117,8 @@
       <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/ulco/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding>
                 <element signature="method#Point#0;class#Point#0" expanded="false" />
                 <element signature="method#Point#1;class#Point#0" expanded="false" />
@@ -128,40 +129,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GraphicsObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ulco/GraphicsObject.java">
+      <file leaf-file-name="Rectangle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Rectangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
               <folding>
-                <element signature="method#GraphicsObject#0;class#GraphicsObject#0" expanded="false" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#893#894#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
+                <element signature="method#Rectangle#1;class#Rectangle#0" expanded="false" />
+                <element signature="method#Rectangle#2;class#Rectangle#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Color.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ulco/Color.java">
+      <file leaf-file-name="StructureTreatment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/StructureTreatment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="method#select#0;class#StructureTreatment#0" expanded="false" />
+                <element signature="method#select#1;class#StructureTreatment#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rectangle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/ulco/Rectangle.java">
+      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state relative-caret-position="68">
+              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
               <folding>
-                <element signature="method#Rectangle#1;class#Rectangle#0" expanded="false" />
-                <element signature="method#Rectangle#2;class#Rectangle#0" expanded="false" />
+                <element signature="method#Triangle#0;class#Triangle#0" expanded="false" />
+                <element signature="method#Triangle#1;class#Triangle#0" expanded="false" />
+                <element signature="method#toString#0;class#Triangle#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Square.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/ulco/Square.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+              <folding>
+                <element signature="method#Square#0;class#Square#0" expanded="false" />
+                <element signature="e#751#752#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,6 +200,8 @@
       <find>parseToJSON</find>
       <find>searchSeparator</find>
       <find>objectToJSON</find>
+      <find>rec</find>
+      <find>rectangle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,12 +225,8 @@
         <option value="$PROJECT_DIR$/src/org/ulco/Parse.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/StructureTreatment.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Child.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/BuilderDocument.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Interface.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/Circle.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Square.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/Layer.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Group.java" />
         <option value="$PROJECT_DIR$/src/test/CircleTest.java" />
         <option value="$PROJECT_DIR$/src/test/DocumentTest.java" />
@@ -221,11 +235,17 @@
         <option value="$PROJECT_DIR$/src/test/GroupTest.java" />
         <option value="$PROJECT_DIR$/src/test/RectangleTest.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Document.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/Point.java" />
         <option value="$PROJECT_DIR$/src/org/ulco/Color.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/GraphicsObject.java" />
-        <option value="$PROJECT_DIR$/src/org/ulco/JSON.java" />
         <option value="$PROJECT_DIR$/src/test/ColorTest.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/JSON.java" />
+        <option value="$PROJECT_DIR$/src/test/TriangleTest.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/BuilderDocument.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/Circle.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/GraphicsObject.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/Layer.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/Point.java" />
+        <option value="$PROJECT_DIR$/src/org/ulco/Rectangle.java" />
       </list>
     </option>
   </component>
@@ -769,7 +789,7 @@
       <workItem from="1511083721784" duration="13728000" />
       <workItem from="1511157346055" duration="37483000" />
       <workItem from="1511544003514" duration="25000" />
-      <workItem from="1511544209808" duration="7347000" />
+      <workItem from="1511544209808" duration="11020000" />
     </task>
     <task id="LOCAL-00001" summary="Recfatoring First task ok">
       <created>1510770011005</created>
@@ -827,25 +847,17 @@
       <option name="project" value="LOCAL" />
       <updated>1511544382549</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Recfatoring tenth task ok&#10;Add attribut color (border and inside ) in the class graphicsObjet&#10;Add class Colortest with three test one test with color inside and border. One test with juste color border. And a last test with juste color inside.&#10;All is ok">
+      <created>1511624141849</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511624141849</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unnamed - 2017.11.25 at 16h 11m 30s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.25 at 16h 12m 32s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.25 at 16h 12m 47s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.25 at 16h 26m 53s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Unnamed - 2017.11.25 at 16h 27m 58s.xml">
-      <configuration name="Unnamed" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Unnamed - 2017.11.25 at 16h 28m 56s.xml">
       <configuration name="Unnamed" configurationId="JUnit" />
     </history-entry>
@@ -861,9 +873,24 @@
     <history-entry file="Unnamed - 2017.11.25 at 16h 33m 24s.xml">
       <configuration name="Unnamed" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Unnamed - 2017.11.25 at 17h 30m 41s.xml">
+      <configuration name="Unnamed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.25 at 17h 36m 26s.xml">
+      <configuration name="Unnamed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.25 at 17h 36m 50s.xml">
+      <configuration name="Unnamed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.25 at 17h 36m 57s.xml">
+      <configuration name="Unnamed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Unnamed - 2017.11.25 at 17h 39m 58s.xml">
+      <configuration name="Unnamed" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131454000" />
+    <option name="totallyTimeSpent" value="135127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="31" width="1368" height="740" extended-state="6" />
@@ -871,19 +898,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19873817" sideWeight="0.47800586" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.198036" sideWeight="0.47800586" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21800947" sideWeight="0.207478" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13420622" sideWeight="0.792522" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47954175" sideWeight="0.792522" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20015106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -899,7 +927,6 @@
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2791798" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -917,18 +944,11 @@
     <MESSAGE value="Recfatoring seventh task ok" />
     <MESSAGE value="Recfatoring eighth task ok" />
     <MESSAGE value="Recfatoring nineth task ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recfatoring nineth task ok" />
+    <MESSAGE value="Recfatoring tenth task ok&#10;Add attribut color (border and inside ) in the class graphicsObjet&#10;Add class Colortest with three test one test with color inside and border. One test with juste color border. And a last test with juste color inside.&#10;All is ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recfatoring tenth task ok&#10;Add attribut color (border and inside ) in the class graphicsObjet&#10;Add class Colortest with three test one test with color inside and border. One test with juste color border. And a last test with juste color inside.&#10;All is ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/ulco/JSON.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
@@ -938,31 +958,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="57" lean-forward="false" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
-          <folding>
-            <element signature="method#Point#0;class#Point#0" expanded="false" />
-            <element signature="method#Point#1;class#Point#0" expanded="false" />
-            <element signature="method#move#0;class#Point#0" expanded="false" />
-            <element signature="method#distance#0;class#Point#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="64" lean-forward="false" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-          <folding>
-            <element signature="method#Square#0;class#Square#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ulco/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -979,8 +974,8 @@
         <state relative-caret-position="153">
           <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#840#841#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,8 +1004,8 @@
           <folding>
             <element signature="method#Layer#0;class#Layer#0" expanded="false" />
             <element signature="method#Layer#1;class#Layer#0" expanded="false" />
-            <element signature="e#1051#1052#0" expanded="false" />
-            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1047#1048#0" expanded="false" />
+            <element signature="e#1072#1073#0" expanded="false" />
             <element signature="method#size#0;class#Layer#0" expanded="false" />
           </folding>
         </state>
@@ -1029,8 +1024,8 @@
         <state relative-caret-position="289">
           <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
           <folding>
-            <element signature="e#363#364#0" expanded="false" />
-            <element signature="e#395#396#0" expanded="false" />
+            <element signature="e#358#359#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1053,8 +1048,8 @@
         <state relative-caret-position="442">
           <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#840#841#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#814#815#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1065,8 +1060,8 @@
           <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding>
             <element signature="method#Square#0;class#Square#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1080,11 +1075,14 @@
             <element signature="method#parse#0;class#JSON#0" expanded="false" />
             <element signature="method#parseOne#0;class#JSON#0" expanded="false" />
             <element signature="method#searchSeparator#0;class#JSON#0" expanded="false" />
+            <element signature="method#objectToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#colorToJSON#0;class#JSON#0" expanded="false" />
             <element signature="method#centerToJSON#0;class#JSON#0" expanded="false" />
             <element signature="method#attributToJSON#0;class#JSON#0" expanded="false" />
             <element signature="method#childrenToJSON#0;class#JSON#0" expanded="false" />
             <element signature="method#specifyChild#0;class#JSON#0" expanded="false" />
             <element signature="method#parseItems#0;class#JSON#0" expanded="false" />
+            <element signature="method#parseToJSON#0;class#JSON#0" expanded="false" />
             <element signature="method#parsePoint#0;class#JSON#0" expanded="false" />
             <element signature="method#parseDouble#0;class#JSON#0" expanded="false" />
           </folding>
@@ -1164,14 +1162,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/org/ulco/Layer.java" />
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/ID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt:///usr/lib/jvm/default-runtime!/java.base/java/util/Vector.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -1456,66 +1446,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Layer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="method#Layer#0;class#Layer#0" expanded="false" />
-            <element signature="method#Layer#1;class#Layer#0" expanded="false" />
-            <element signature="e#1051#1052#0" expanded="false" />
-            <element signature="e#1078#1079#0" expanded="false" />
-            <element signature="method#size#0;class#Layer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="method#Square#0;class#Square#0" expanded="false" />
-            <element signature="e#771#772#0" expanded="false" />
-            <element signature="e#802#803#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/StructureTreatment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="method#select#0;class#StructureTreatment#0" expanded="false" />
-            <element signature="method#select#1;class#StructureTreatment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Interface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#840#841#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,118 +1477,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RectangleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/DocumentTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/BuilderDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="method#constDocument#0;class#BuilderDocument#0" expanded="false" />
-            <element signature="method#constDocument#1;class#BuilderDocument#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="method#Group#0;class#Group#0" expanded="false" />
-            <element signature="method#Group#1;class#Group#0" expanded="false" />
-            <element signature="method#isClosed#0;class#Group#0" expanded="false" />
-            <element signature="method#copy#0;class#Group#0" expanded="false" />
-            <element signature="method#move#0;class#Group#0" expanded="false" />
-            <element signature="method#makeDataToExport#0;class#Group#0" expanded="false" />
-            <element signature="method#makeStringToExport#0;class#Group#0" expanded="false" />
-            <element signature="method#size#0;class#Group#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="method#Point#0;class#Point#0" expanded="false" />
-            <element signature="method#Point#1;class#Point#0" expanded="false" />
-            <element signature="method#move#0;class#Point#0" expanded="false" />
-            <element signature="method#distance#0;class#Point#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Document.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="method#Document#1;class#Document#0" expanded="false" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="method#createLayer#0;class#Document#0" expanded="false" />
-            <element signature="method#getObjectNumber#0;class#Document#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/GraphicsObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="method#GraphicsObject#0;class#GraphicsObject#0" expanded="false" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ulco/JSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="95" column="58" lean-forward="false" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#parse#0;class#JSON#0" expanded="false" />
-            <element signature="method#parseOne#0;class#JSON#0" expanded="false" />
-            <element signature="method#searchSeparator#0;class#JSON#0" expanded="false" />
-            <element signature="method#centerToJSON#0;class#JSON#0" expanded="false" />
-            <element signature="method#attributToJSON#0;class#JSON#0" expanded="false" />
-            <element signature="method#childrenToJSON#0;class#JSON#0" expanded="false" />
-            <element signature="method#specifyChild#0;class#JSON#0" expanded="false" />
-            <element signature="method#parseItems#0;class#JSON#0" expanded="false" />
-            <element signature="method#parsePoint#0;class#JSON#0" expanded="false" />
-            <element signature="method#parseDouble#0;class#JSON#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1686,10 +1513,182 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/ColorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="136" lean-forward="false" selection-start-line="35" selection-start-column="136" selection-end-line="35" selection-end-column="136" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/RectangleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TriangleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/BuilderDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="method#constDocument#0;class#BuilderDocument#0" expanded="false" />
+            <element signature="method#constDocument#1;class#BuilderDocument#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <element signature="method#Document#1;class#Document#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="method#createLayer#0;class#Document#0" expanded="false" />
+            <element signature="method#getObjectNumber#0;class#Document#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/GraphicsObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding>
+            <element signature="method#GraphicsObject#0;class#GraphicsObject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="method#Group#0;class#Group#0" expanded="false" />
+            <element signature="method#Group#1;class#Group#0" expanded="false" />
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="method#isClosed#0;class#Group#0" expanded="false" />
+            <element signature="method#copy#0;class#Group#0" expanded="false" />
+            <element signature="method#move#0;class#Group#0" expanded="false" />
+            <element signature="method#makeDataToExport#0;class#Group#0" expanded="false" />
+            <element signature="method#makeStringToExport#0;class#Group#0" expanded="false" />
+            <element signature="method#size#0;class#Group#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/ID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/JSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="110" column="64" lean-forward="false" selection-start-line="110" selection-start-column="64" selection-end-line="110" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parse#0;class#JSON#0" expanded="false" />
+            <element signature="method#parseOne#0;class#JSON#0" expanded="false" />
+            <element signature="method#searchSeparator#0;class#JSON#0" expanded="false" />
+            <element signature="method#objectToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#colorToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#centerToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#attributToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#childrenToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#specifyChild#0;class#JSON#0" expanded="false" />
+            <element signature="method#parseItems#0;class#JSON#0" expanded="false" />
+            <element signature="method#parseToJSON#0;class#JSON#0" expanded="false" />
+            <element signature="method#parsePoint#0;class#JSON#0" expanded="false" />
+            <element signature="method#parseDouble#0;class#JSON#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Layer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <element signature="method#Layer#0;class#Layer#0" expanded="false" />
+            <element signature="method#Layer#1;class#Layer#0" expanded="false" />
+            <element signature="method#size#0;class#Layer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="method#Point#0;class#Point#0" expanded="false" />
+            <element signature="method#Point#1;class#Point#0" expanded="false" />
+            <element signature="method#move#0;class#Point#0" expanded="false" />
+            <element signature="method#distance#0;class#Point#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="method#Square#0;class#Square#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ulco/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
             <element signature="method#Rectangle#1;class#Rectangle#0" expanded="false" />
             <element signature="method#Rectangle#2;class#Rectangle#0" expanded="false" />
@@ -1697,12 +1696,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/ColorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/StructureTreatment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="136" lean-forward="false" selection-start-line="35" selection-start-column="136" selection-end-line="35" selection-end-column="136" />
+        <state relative-caret-position="136">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#select#0;class#StructureTreatment#0" expanded="false" />
+            <element signature="method#select#1;class#StructureTreatment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ulco/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="method#Triangle#0;class#Triangle#0" expanded="false" />
+            <element signature="method#Triangle#1;class#Triangle#0" expanded="false" />
+            <element signature="method#toString#0;class#Triangle#0" expanded="false" />
           </folding>
         </state>
       </provider>
